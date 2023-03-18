@@ -8,12 +8,30 @@ class Nurlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow,
-      body: Center(
-          child: Text(
-        'salam',
-        style: TextStyle(color: Colors.black, fontSize: 44),
-      )),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Card(
+              color: Colors.cyan,
+              child: Text(
+                'salam',
+                style: TextStyle(color: Colors.black, fontSize: 44),
+              ),
+            ),
+          ),
+           Padding(
+             padding: const EdgeInsets.symmetric(horizontal: 55),
+             child: Card(
+               color: Colors.yellowAccent,
+              child: Text(
+                'salam',
+                style: TextStyle(color: Colors.black, fontSize: 44),
+              ),
+                     ),
+           ),
+        ],
+      ),
     );
   }
 }
