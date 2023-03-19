@@ -8,20 +8,30 @@ class Nurlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color:Colors.yellow,
-        child: ListView.builder(
-          itemCount: products.length,
-          itemBuilder: (context, index) {
-            return  ListTile(
-              leading: CircleAvatar(child: Text(products[index][0]),),
-              title: Text(products[index]),
-              subtitle: Text(productDetails[index]),
-              trailing: Text(price[index].toString()),
-            );
+      body: Column(
+        children: [
+          Container(
+            color:Colors.yellow,
+            child: ListView.builder(
+              itemCount: products.length,
+              itemBuilder: (context, index) {
+                return  ListTile(
+                  leading: CircleAvatar(child: Text(products[index][0]),),
+                  title: Text(products[index]),
+                  subtitle: Text(productDetails[index]),
+                  trailing: Text(price[index].toString()),
+                );
+                
+              }, ),
             
-          } ),
+          ),
+          Row(children: [
+            Icon(Icons.remove,size: 35,)
+          ],)
+        ],
       ),
+      
+
     );
   }
 }
