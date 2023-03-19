@@ -9,6 +9,7 @@ class Nurlan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color:Colors.yellow,
         child: ListView.builder(
           itemCount: products.length,
           itemBuilder: (context, index) {
@@ -20,9 +21,7 @@ class Nurlan extends StatelessWidget {
             );
             
           } ),
-      )
-       
-      ,
+      ),
     );
   }
 }
