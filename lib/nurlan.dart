@@ -8,6 +8,7 @@ class Nurlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         children: [
           Container(
@@ -25,13 +26,14 @@ class Nurlan extends StatelessWidget {
               }, ),
             
           ),
-          Row(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
             Icon(Icons.remove,size: 35,)
           ],)
         ],
       ),
-      
-
+    
     );
   }
 }
