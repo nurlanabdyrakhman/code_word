@@ -1,3 +1,4 @@
+import 'package:code_word/nurlan.dart';
 import 'package:flutter/material.dart';
 
 class ViewPage extends StatelessWidget {
@@ -7,7 +8,9 @@ class ViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Nurlan(),),);
+        },
         child: Icon(Icons.favorite,color: Colors.red,),
       ),
     );
