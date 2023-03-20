@@ -6,12 +6,15 @@ class ViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>Nurlan(),),);
-        },
-        child: Icon(Icons.favorite,color: Colors.red,),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Nurlan(),),);
+          },
+          child: Icon(Icons.favorite,color: Colors.red,),
+        ),
       ),
     );
   }

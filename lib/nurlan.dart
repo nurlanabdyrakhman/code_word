@@ -9,7 +9,12 @@ class Nurlan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:  AppBar(title: Text('salam'),
-      backgroundColor: Colors.redAccent,),
+      backgroundColor: Colors.redAccent,
+       actions: [
+       IconButton(onPressed: (){}, icon: Icon(Icons.add))
+       ],
+     ),
+      
       body: Container(
         child: ListView.builder(
           itemCount: products.length,
@@ -22,9 +27,9 @@ class Nurlan extends StatelessWidget {
             );
             
           } ),
-      )
-       
-      ,
+      ),
+    
+      
     );
   }
 }
