@@ -25,9 +25,7 @@ class Nurlan extends StatelessWidget {
               }, ),
             
           ),
-          Row(children: [
-            Icon(Icons.remove,size: 35,)
-          ],)
+         
         ],
       ),
       

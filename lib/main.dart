@@ -1,4 +1,5 @@
 
+import 'package:code_word/101/view_container.dart';
 import 'package:code_word/nurlan.dart';
 import 'package:code_word/view/view_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Nurlan(),
+      home: ViewContainer(),
     );
   }
 }
