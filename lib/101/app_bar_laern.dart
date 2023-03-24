@@ -10,8 +10,13 @@ class AppBarLearn extends StatelessWidget {
       appBar: AppBar(
         title: Text(_title),
         actions: [
-          Icon(
-            Icons.do_disturb,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 33),
+            child: Icon(
+              Icons.do_disturb,
+              color: Colors.yellow,
+              size: 35,
+            ),
           ),
           // CircularProgressIndicator(color: Colors.pink,)
         ],
