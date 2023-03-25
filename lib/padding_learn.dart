@@ -1,3 +1,4 @@
+import 'package:code_word/101/core_page.dart';
 import 'package:flutter/material.dart';
 
 class PaddingLearn extends StatelessWidget {
@@ -10,14 +11,19 @@ class PaddingLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       title: Text('77'),
+        title: Text('77'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ListTile(
               onTap: () {
-                print('hhh');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CorePage(),
+                  ),
+                );
               },
               subtitle: text,
               leading: Icon(Icons.add),
@@ -66,23 +72,21 @@ class PaddingLearn extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 50),
                   child: Container(
-                    color: Colors.yellow,
+                    color: Colors.pink,
                     height: 200,
                   ),
                 ),
                 Positioned(
-                height: 55,
-                top: 100,
-                right: 0,
-                left: 0,
-                child: Container(
-                  color: Colors.green,
-                ),),
-                
+                  height: 55,
+                  top: 100,
+                  right: 0,
+                  left: 0,
+                  child: Container(
+                    color: Colors.green,
+                  ),
+                ),
               ],
             ),
-          
-            
           ],
         ),
       ),
