@@ -21,7 +21,7 @@ class PaddingLearn extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CorePage(),
+                    builder: (context) => CorePage(Messege: 'ff',),
                   ),
                 );
               },
