@@ -71,21 +71,23 @@ class _CorePageState extends State<CorePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 55),
-                  child: SizedBox(
-                    width: 200,
-                    height: 100,
-                    child: Card(
-                      
-                    shape: StadiumBorder(),
-                      color: Colors.blue,
-                      child: Center(
-                        child: InkWell(
-                          onTap: (){
-                           
-                          },
-                          child: Text(
-                          count.toString(),
-                            style: TextStyle(color: Colors.white, fontSize: 33),
+                  child: Expanded(
+                    child: SizedBox(
+                      width: 200,
+                      height: 100,
+                      child: Card(
+                        
+                      shape: StadiumBorder(),
+                        color: Colors.blue,
+                        child: Center(
+                          child: InkWell(
+                            onTap: (){
+                             
+                            },
+                            child: Text(
+                            count.toString(),
+                              style: TextStyle(color: Colors.white, fontSize: 33),
+                            ),
                           ),
                         ),
                       ),
