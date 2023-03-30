@@ -27,7 +27,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
           itemCount: _items.length,
           itemBuilder: (context, index) {
             return Card(
-              elevation: 0,
+            
               child: SizedBox(
               height: 300,
               child: Padding(
