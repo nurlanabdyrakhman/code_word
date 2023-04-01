@@ -1,0 +1,34 @@
+import 'package:code_word/101/model/post_model.dart';
+import 'package:code_word/services/dio_services.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+
+class PostController extends GetxController{
+RxList<PostModel>posts=RxList();
+RxBool isLoading =true.obs;
+RxBool isInternerConnect=true.obs;
+var url='https://jsonplaceholder.typicode.com/posts';
+getPosts()async{
+   isInternerConnectFunc();
+   isLoading.value=true;
+ var response= await DioServices().getMedhut(url);
+ if(response.statusCode==200){
+   response.data.forEach((element){
+   posts.add(PostModel.fromJson(element));
+    });
+   isLoading.value=false;
+ }
+
+}
+
+  isInternerConnectFunc()async{
+    isInternerConnect.value= await  InternetConnectionChecker().hasConnection;
+  }
+  @override
+ void onInit(){
+  isInternerConnectFunc();
+  getPosts();
+  super.onInit();
+ }
+}

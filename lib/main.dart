@@ -8,6 +8,7 @@ import 'package:code_word/padding_learn.dart';
 import 'package:code_word/view/hame_page.dart';
 import 'package:code_word/view/view_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,15 +19,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.dark(
+      theme: ThemeData.light(
 
       ).copyWith(
       appBarTheme: AppBarTheme(
         centerTitle: true,
-        color: Colors.transparent,
+        color: Colors.red,
         elevation: 0,
        
         )
