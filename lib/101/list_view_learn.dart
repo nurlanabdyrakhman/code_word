@@ -1,34 +1,25 @@
 import 'package:code_word/controller/post_controller.dart';
 import 'package:code_word/services/dio_services.dart';
+import 'package:code_word/utils/colots.dart';
 import 'package:code_word/utils/constants.dart';
 import 'package:code_word/view/details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-class ListViewLearn extends StatefulWidget {
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+class ListViewLearn extends StatelessWidget {
   ListViewLearn({super.key});
 
-  @override
-  State<ListViewLearn> createState() => _ListViewLearnState();
-}
-
-class _ListViewLearnState extends State<ListViewLearn> {
   int conter = 0;
+
   late final List<ColloctionModel> _items;
+
   PostController postController = Get.put(PostController());
+
   @override
-  void initState() {
-    super.initState();
-    _items = [
-      ColloctionModel(
-          ImagePath: 'assets/travel.jpeg', title: 'Flutter1', price: 3.4),
-      ColloctionModel(
-          ImagePath: 'assets/travel.jpeg', title: 'Flutter2', price: 3.4),
-      ColloctionModel(
-          ImagePath: 'assets/travel.jpeg', title: 'Flutter3', price: 3.4)
-    ];
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +29,29 @@ class _ListViewLearnState extends State<ListViewLearn> {
       ),
       centerTitle: true,
     );
+   
     return Scaffold(
       appBar: appBar2,
+      floatingActionButton: Obx(
+       
+        ()=>  postController.isInternerConnect.value?
+        FloatingActionButton(
+          backgroundColor: MyColors.prColor,
+          onPressed: (){
+           postController.isListViewScroolToDown.value?
+           postController.scrollListViewUpward():
+            postController.scrollListViewDownWord();
+          },
+          
+        child: FaIcon(
+           postController.isListViewScroolToDown.value?
+          FontAwesomeIcons.arrowUp:
+           FontAwesomeIcons.arrowDown
+         
+      
+        ),
+        ):Container(),
+      ),
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
@@ -53,6 +65,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
+                        
                         width: 150,
                         height: 150,
                         child: Lottie.asset('assets/b.json'),
@@ -65,7 +78,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
                          showCustomSnackBar(context);
                         }
                         },
-                        color: Colors.red,
+                        color: MyColors.prColor,
                         child: Text('Try again',style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w300,
@@ -86,7 +99,8 @@ class _ListViewLearnState extends State<ListViewLearn> {
       onRefresh: () {
         return postController.getPosts();
       },
-      child: ListView.builder(
+      child: ScrollablePositionedList.builder(
+         itemScrollController:postController.itemScrollController,
         physics: BouncingScrollPhysics(),
         itemCount: postController.posts.length,
         itemBuilder: (cxt, i) {
@@ -95,9 +109,10 @@ class _ListViewLearnState extends State<ListViewLearn> {
               Get.to(DetailsView(index: i), transition: Transition.cupertino);
             },
             child: Card(
+              color: Colors.cyan,
               child: ListTile(
                 leading: Container(
-                  height: 50,
+                  height: 70,
                   width: 50,
                   decoration: BoxDecoration(
                       color: Colors.cyan,

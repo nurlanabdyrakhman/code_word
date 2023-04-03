@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
        inspect('GG');
      });
    }
+   
 
   @override
   Widget build(BuildContext context) {
@@ -75,5 +76,15 @@ class _ColorContainer extends StatelessWidget {
 }
  
    
-
+// void initState() {
+//     super.initState();
+//     _items = [
+//       ColloctionModel(
+//           ImagePath: 'assets/travel.jpeg', title: 'Flutter1', price: 3.4),
+//       ColloctionModel(
+//           ImagePath: 'assets/travel.jpeg', title: 'Flutter2', price: 3.4),
+//       ColloctionModel(
+//           ImagePath: 'assets/travel.jpeg', title: 'Flutter3', price: 3.4)
+//     ];
+//   }
     
