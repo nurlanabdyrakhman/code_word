@@ -46,7 +46,9 @@ class _HomePageState extends State<HomePage> {
     BottomNavigationBarItem(icon: _ColorContainer(color: Colors.red,),label: 'red'),
     BottomNavigationBarItem(icon: _ColorContainer(color: Colors.yellow,),label: 'yellow'),
     BottomNavigationBarItem(icon: _ColorContainer(color: Colors.blue,),label: 'blue'),
-     ],),
+     ],
+     ),
+     
      drawer: Drawer(backgroundColor: Colors.cyan,),
      body: ListView(
     

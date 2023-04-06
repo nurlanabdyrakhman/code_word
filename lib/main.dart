@@ -2,6 +2,7 @@
 import 'package:code_word/101/app_bar_laern.dart';
 import 'package:code_word/101/button_learn.dart';
 import 'package:code_word/101/container_size_box_learn.dart';
+import 'package:code_word/101/cycle_learn.dart';
 import 'package:code_word/101/list_view_learn.dart';
 import 'package:code_word/nurlan.dart';
 import 'package:code_word/padding_learn.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
        
         )
       ),
-      home:ListViewLearn(),
+      home:CycleLearn(messeger: 'Salam',),
       
     );
   }
