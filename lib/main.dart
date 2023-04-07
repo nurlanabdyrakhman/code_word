@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
        
         )
       ),
-      home:CycleLearn(messeger: 'Salam',),
+      home:CycleLearn(messeger: '',),
       
     );
   }
