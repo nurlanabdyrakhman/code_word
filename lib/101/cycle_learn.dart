@@ -11,6 +11,11 @@ class _CycleLearnState extends State<CycleLearn> {
   String _message = '';
   late final bool _isOdd;
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+     _computeName();
+  }
+  @override
   void initState() {
     super.initState();
     _message = widget.messeger;
@@ -34,7 +39,11 @@ class _CycleLearnState extends State<CycleLearn> {
       ),
       body: _isOdd
           ? TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                 
+                });
+              },
               child: Text(_message),
             )
           : ElevatedButton(onPressed: () {}, child: Text(_message)),
