@@ -32,6 +32,11 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
             ),
             
           ),
+          Container(
+            width: 150,
+            height: 150,
+            child: Center(child: Text('10.04',textAlign: TextAlign.center,)),
+          color: Colors.blue,)
         ],
       ),
     );
