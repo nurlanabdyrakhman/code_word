@@ -14,12 +14,25 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: TextField(
-        decoration: InputDecoration(
-         prefixIcon: Icon(Icons.mail),
-         border: OutlineInputBorder(),
-        hintText: 'Mail',
-        ),
+      body: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+             prefixIcon: Icon(Icons.mail),
+             border: OutlineInputBorder(),
+            hintText: 'Mail',
+            ),
+            
+          ),
+          TextField(
+            decoration: InputDecoration(
+             prefixIcon: Icon(Icons.mail),
+             border: OutlineInputBorder(),
+            hintText: 'Password',
+            ),
+            
+          ),
+        ],
       ),
     );
   }
