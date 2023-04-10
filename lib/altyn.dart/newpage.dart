@@ -14,7 +14,19 @@ class _NewPageState extends State<NewPage> {
       appBar: AppBar(title: Text("менин тиркемем")),
       body: Center(
         child: Column(
-          children: [ElevatedButton(onPressed: () {}, child: Icon(Icons.mail))],
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Icon(Icons.mail),
+            ),
+            Center(
+              child: Container(
+                height: 150,
+                width: 150,
+                color: Colors.cyan,
+              ),
+            )
+          ],
         ),
       ),
     );
