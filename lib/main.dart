@@ -4,7 +4,6 @@ import 'package:code_word/101/button_learn.dart';
 import 'package:code_word/101/container_size_box_learn.dart';
 import 'package:code_word/101/cycle_learn.dart';
 import 'package:code_word/101/list_view_learn.dart';
-
 import 'package:code_word/nurlan.dart';
 import 'package:code_word/padding_learn.dart';
 import 'package:code_word/view/page/hame_page.dart';
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
        
       ),
-      home:HomeView(),
+      home:CycleLearn(messeger: '',),
       
     );
   }
