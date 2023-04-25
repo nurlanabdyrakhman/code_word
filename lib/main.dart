@@ -7,7 +7,8 @@ import 'package:code_word/101/list_view_learn.dart';
 
 import 'package:code_word/nurlan.dart';
 import 'package:code_word/padding_learn.dart';
-import 'package:code_word/view/hame_page.dart';
+import 'package:code_word/view/page/hame_page.dart';
+import 'package:code_word/view/home_view.dart';
 import 'package:code_word/view/view_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,9 +33,10 @@ class MyApp extends StatelessWidget {
         color: Colors.red,
         elevation: 0,
        
-        )
+        ),
+       
       ),
-      home:HomePage(),
+      home:HomeView(),
       
     );
   }

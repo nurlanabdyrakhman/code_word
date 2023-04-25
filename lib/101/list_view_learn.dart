@@ -2,7 +2,7 @@ import 'package:code_word/controller/post_controller.dart';
 import 'package:code_word/services/dio_services.dart';
 import 'package:code_word/utils/colots.dart';
 import 'package:code_word/utils/constants.dart';
-import 'package:code_word/view/details_view.dart';
+import 'package:code_word/view/page/details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -106,7 +106,7 @@ class ListViewLearn extends StatelessWidget {
         itemBuilder: (cxt, i) {
           return InkWell(
             onTap: () {
-              Get.to(DetailsView(index: i), transition: Transition.cupertino);
+              Get.to(DetailsPage(index: i), transition: Transition.cupertino);
             },
             child: Card(
               color: Colors.cyan,

@@ -2,8 +2,8 @@ import 'package:code_word/controller/post_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DetailsView extends StatelessWidget {
-  DetailsView({super.key, required this.index});
+class DetailsPage extends StatelessWidget {
+  DetailsPage({super.key, required this.index});
   PostController postController = Get.find<PostController>();
   int index;
   @override
