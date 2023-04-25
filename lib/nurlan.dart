@@ -8,6 +8,9 @@ class Nurlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Salam'),
+      ),
       body: Container(
         child: ListView.builder(
           itemCount: products.length,
