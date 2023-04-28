@@ -3,6 +3,7 @@
 import 'package:code_word/components/components.dart';
 import 'package:code_word/controller/simpleUiController.dart';
 import 'package:code_word/services/api_service.dart';
+import 'package:code_word/view/detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -64,28 +65,36 @@ class HomeView extends StatelessWidget {
                             childrenDelegate: SliverChildBuilderDelegate(
                               childCount: simpleUiController.photos.length,
                               (context, index) {
-                                return Container(
-                                  child: CachedNetworkImage(
-                                    imageUrl: simpleUiController
-                                        .photos[index].urls!['small'],
-                                    imageBuilder: (ctx, img) {
-                                      return Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          image: DecorationImage(
-                                            image: img,
-                                            fit: BoxFit.cover,
-                                          ),
+                                return GestureDetector(
+                                  onTap: (){
+                                    Get.to(DetailView(index: index),);
+                                  },
+                                  child: Hero(
+                                    tag: simpleUiController.photos[index].id!,
+                                    child: Container(
+                                      child: CachedNetworkImage(
+                                        imageUrl: simpleUiController
+                                            .photos[index].urls!['small'],
+                                        imageBuilder: (ctx, img) {
+                                          return Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              image: DecorationImage(
+                                                image: img,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                        placeholder: (context, url) => Center(
+                                          child: customLoading(),
                                         ),
-                                      );
-                                    },
-                                    placeholder: (context, url) => Center(
-                                      child: customLoading(),
-                                    ),
-                                    errorWidget: (context, url, error) =>
-                                        Center(
-                                      child: errorIcon(),
+                                        errorWidget: (context, url, error) =>
+                                            Center(
+                                          child: errorIcon(),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 );

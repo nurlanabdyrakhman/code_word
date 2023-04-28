@@ -86,10 +86,20 @@ class _ColorContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: color,
-      width: 10,
-      height: 10,
+    return Column(
+      children: [
+        Container(
+          color: color,
+          width: 10,
+          height: 10,
+        ),
+         Container(
+          color: color,
+          width: 10,
+          height: 10,
+          child: Text('Kayra all'),
+        ),
+      ],
     );
   }
 }
