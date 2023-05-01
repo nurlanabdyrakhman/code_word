@@ -93,18 +93,8 @@ class _ColorContainer extends StatelessWidget {
           width: 10,
           height: 10,
         ),
-         Container(
-          color: color,
-          width: 10,
-          height: 10,
-          child: Text('Kayra all'),
-        ),
-        Container(
-          color: color,
-          width: 10,
-          height: 10,
-          child: Text('Kayra ber'),
-        ),
+        
+        
       ],
     );
   }
