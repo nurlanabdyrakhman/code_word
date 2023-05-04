@@ -31,6 +31,16 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
             hintText: 'Password',
             ),
             
+            
+          ),
+           TextField(
+            decoration: InputDecoration(
+             prefixIcon: Icon(Icons.mail),
+             border: OutlineInputBorder(),
+            hintText: 'bosh',
+            ),
+            
+            
           ),
         ],
       ),
